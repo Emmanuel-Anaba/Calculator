@@ -1,0 +1,12 @@
+I really want to use formik here
+
+Each button has its own value that gets passed into a variable called resultStorage or smth else
+
+There'll be a <p> or <h1> tag to display what is currently in resultStorage
+
+When the user hits enter, i eval(resultStorage) and it shows immediately on the <p> or <h1> tag
+
+There'll be an ans button that saves the last evaluated stuff to localStorage and retrieves it when the button is clicked
+
+A way of replacing * with x, 
+
