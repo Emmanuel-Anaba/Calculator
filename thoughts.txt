@@ -10,3 +10,5 @@ There'll be an ans button that saves the last evaluated stuff to localStorage an
 
 A way of replacing * with x, 
 
+
+Can I use block statements with tenary operators

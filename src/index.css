@@ -7,6 +7,6 @@
     @apply outline-0;
   }
   button {
-    @apply bg-emerald-600 w-10 h-10 rounded text-lg font-medium;
+    @apply bg-emerald-600 rounded text-lg font-medium;
   }
 }
