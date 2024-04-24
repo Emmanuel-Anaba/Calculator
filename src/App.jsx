@@ -1,6 +1,6 @@
 import { useState } from "react";
 const App = () => {
-  const [result, setResult] = useState(" ");
+  const [result, setResult] = useState("");
   const clearAll = () => {
     setResult("");
   };
@@ -35,22 +35,22 @@ const App = () => {
     n = eval(result);
     n !== "" && setResult(String(n ** 2));
   };
-  const sin = (n) => {
+  const sin = (n, r) => {
     n = eval(result);
-    n *= (Math.PI / 180);
-    n = Math.sin(n);
-    n = Math.fround(n);
-    console.log(n);
-    // n !== "" && setResult(n);
+    r = Math.fround(Math.sin(n * (Math.PI / 180)));
+    n === undefined ? alert("Syntax Error! Enter The Number First") : setResult(r);
   };
-  const cos = (n) => {
+  const cos = (n, r) => {
     n = eval(result);
-    n !== "" && setResult(String(n ** 2));
+    r = Math.fround(Math.cos(n * (Math.PI / 180)));
+    n === undefined ? alert("Syntax Error! Enter The Number First") : setResult(r);
   };
-  const tan = (n) => {
+  const tan = (n, r) => {
     n = eval(result);
-    n !== "" && setResult(String(n ** 2));
+    r = Math.fround(Math.tan(n * (Math.PI / 180)));
+    n === undefined ? alert("Syntax Error! Enter The Number First") : setResult(r);
   };
+
   const Buttons = [
     { text: "AC", doSmth: clearAll },
     { text: "DEL", doSmth: goBack },
@@ -80,10 +80,12 @@ const App = () => {
 
   return (
     <>
-      <main className="h-svh grid place-items-center text-emerald-100">
-        <div className="grid gap-2 bg-emerald-800 p-2 rounded w-[80%] h-[80%]">
-          <div className="bg-emerald-600 rounded">{result}</div>
-          <div className="grid grid-cols-4 gap-2">
+      <main className="h-svh grid place-items-center text-emerald-100 text-2xl">
+        <div className="grid gap-2 bg-emerald-800 p-3 rounded w-[90%] md:w-[60%] h-[90%]">
+          <div className="bg-emerald-500 rounded p-2 overflow-x-scroll textBox text-right">
+            {result}
+          </div>
+          <div className="grid grid-cols-4 gap-3">
             {Buttons.map(({ text, doSmth }) => (
               <button key={text} onClick={(e) => doSmth(e)}>
                 {text}

@@ -9,4 +9,10 @@
   button {
     @apply bg-emerald-600 rounded text-lg font-medium;
   }
+  .textBox::-webkit-scrollbar{
+    @apply bg-emerald-400 h-2;
+  }
+  .textBox::-webkit-scrollbar-thumb{
+    @apply bg-emerald-600 rounded-full;
+  }
 }
