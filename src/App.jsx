@@ -8,6 +8,7 @@ const App = () => {
     setResult(String(result.slice(0, -1)));
   };
   const add = (e) => {
+    // I want to use value instead of innerHTML
     e = e.target.innerHTML;
     setResult(String(result + e));
   };
@@ -38,17 +39,23 @@ const App = () => {
   const sin = (n, r) => {
     n = eval(result);
     r = Math.fround(Math.sin(n * (Math.PI / 180)));
-    n === undefined ? alert("Syntax Error! Enter The Number First") : setResult(r);
+    n === undefined
+      ? alert("Syntax Error! Enter The Number First")
+      : setResult(r);
   };
   const cos = (n, r) => {
     n = eval(result);
     r = Math.fround(Math.cos(n * (Math.PI / 180)));
-    n === undefined ? alert("Syntax Error! Enter The Number First") : setResult(r);
+    n === undefined
+      ? alert("Syntax Error! Enter The Number First")
+      : setResult(r);
   };
   const tan = (n, r) => {
     n = eval(result);
     r = Math.fround(Math.tan(n * (Math.PI / 180)));
-    n === undefined ? alert("Syntax Error! Enter The Number First") : setResult(r);
+    n === undefined
+      ? alert("Syntax Error! Enter The Number First")
+      : setResult(r);
   };
 
   const Buttons = [
