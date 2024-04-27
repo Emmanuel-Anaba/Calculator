@@ -1,5 +1,0 @@
-I really want to use formik here
-
-A way of replacing the multiplication, division and square signs
-
-Can I use block statements with tenary operators
